@@ -1,5 +1,7 @@
 # readme
 
+### 説明
+
 centosのbasicなテスト環境構築用
 
 基本的にはMac上で動かすことを想定
@@ -20,16 +22,6 @@ centosのbasicなテスト環境構築用
 .gitconfigの運用方法
 
 [同じマシンで複数のgithubアカウントを使い分ける](http://qiita.com/strsk/items/96987bfc98e3f92fe6fb)
-
-
-# 使い方
-
-```
-$ cd ${workdirctory}
-$ git clone https://github.com/iganari/base-centos.git
-$ cd base-centos/opsfiles
-$ vagrant up ; vagrant ssh
-```
 
 
 
