@@ -34,3 +34,6 @@ $ git clone https://github.com/iganari/base-centos.git
 $ cd base-centos/opsfiles
 $ vagrant up ; vagrant ssh
 ```
+
+
+あとはgithubでやるかどうか。。。
