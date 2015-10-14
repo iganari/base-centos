@@ -1,24 +1,34 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+
 Vagrant.configure(2) do |config|
   config.vm.box = "chef/centos-6.6"
   config.vbguest.auto_update = false
+  # config.omnibus.chef_version=:latest
 
+
+  config.vm.provider "virtualbox" do |vb|
+  ### vagrant hostname 
+  vb.name = "base-centos"
+  # vb.name = ""
+  end  
+
+
+  config.vm.define :web1 do |web|
   ### determined specific IP.
-  config.vm.network "private_network", ip: "192.168.33.12"
+  web.vm.network "private_network", ip: "192.168.33.12"
+  ### vbox name
+  web.vm.hostname = 'vagrant-svr'
+  end
+
 
   ### install of chef latest version
-  config.omnibus.chef_version=:latest
+  # config.omnibus.chef_version=:latest
 
 
 
-
-
-
-
-
-
+end
 
 
 
@@ -62,4 +72,4 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
-end
+  # end
