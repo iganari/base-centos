@@ -25,7 +25,7 @@ centosのbasicなテスト環境構築用
 
 
 
-### 使い方
+### how to use
 
 
 ```
