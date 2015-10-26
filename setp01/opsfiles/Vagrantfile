@@ -15,13 +15,10 @@ Vagrant.configure(2) do |config|
     vb.name = "base-centos"
     vb.customize ['modifyvm', :id,
                   "--memory", 1024]
-    #               "--size" , 2048]
-    # vb.customize ['modifyvm', :id, "--memory", 1024]
-    # vb.customize ['modifyvm', :id, "--memory", 1024]
   end  
  
   ### settitng of synced_folder
-  config.vm.synced_folder "../", "/develop/base-centos", \
+  config.vm.synced_folder "../../../", "/develop/base-centos", \
     :create => true, \
     :owner  => 'root', \
     :group  => 'root', \
@@ -31,12 +28,11 @@ Vagrant.configure(2) do |config|
 
 
   ### install of chef recipe
-  config.omnibus.chef_version=:latest
-  config.vm.provision  "chef_zero" do |chef|
-    chef.cookbooks_path = "./base-repo/cookbooks"
-    chef.roles_path = "base-repo/roles"
-    chef.add_role "common"
-#     chef.add_recipe "base"
-  end
+    config.omnibus.chef_version=:latest
+    config.vm.provision  "chef_zero" do |chef|
+      chef.cookbooks_path = "./step1-repo/cookbooks"
+      chef.roles_path = "step1-repo/roles"
+      chef.add_role "common"
+    end
 
 end
