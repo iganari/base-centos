@@ -52,4 +52,42 @@ $ vim roles/common.json
 }
 ```
 
+### gitをインストールする
 
++ Berksfileに追記
+
+```text:step2-repo/Berksfile
+
+cookbook 'timezone-ii', git: "https://github.com/L2G/timezon    e-ii.git"
+
++ cookbook 'git'
+```
+
++ Berksfileをupdateする
+ 
+```
+$ berks update
+```
+
+
++ インストール
+
+```text:cmd
+$ cd step2-repo
+$ berks vendor cookbooks
+```
+
++ common.jsonのrun_listに追加
+
+```text:step2-repo/common.json
+"run_list": [
+  "recipe[timezone-ii::rhel]"
++ ,"recipe[git]"
+  ]
+```
+
+
+### 参考URL
+
++ Berkshelf で Chef Cookbook の管理
+    + http://jedipunkz.github.io/blog/2013/03/17/berkshelf-chef-cookbook-manage/
