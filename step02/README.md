@@ -86,3 +86,8 @@ $ berks vendor cookbooks
   ]
 ```
 
+
+### 参考URL
+
++ Berkshelf で Chef Cookbook の管理
+    + http://jedipunkz.github.io/blog/2013/03/17/berkshelf-chef-cookbook-manage/
