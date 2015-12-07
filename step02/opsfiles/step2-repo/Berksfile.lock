@@ -1,6 +1,7 @@
 DEPENDENCIES
   elasticsearch (~> 2.1.0)
   git (= 4.2.4)
+  iptables
   timezone-ii
     git: https://github.com/L2G/timezone-ii.git
     revision: 28c9e49c58c534e798cf01a77a9373c4c54f4587
@@ -15,6 +16,7 @@ GRAPH
   build-essential (2.2.4)
   chef-sugar (3.1.1)
   chef_handler (1.2.0)
+  compat_resource (12.5.14)
   dmg (2.3.0)
   elasticsearch (2.1.0)
     apt (>= 0.0.0)
@@ -26,6 +28,8 @@ GRAPH
     dmg (>= 0.0.0)
     windows (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  iptables (2.0.1)
+    compat_resource (>= 0.0.0)
   timezone-ii (0.2.9992)
   windows (1.38.4)
     chef_handler (>= 0.0.0)
