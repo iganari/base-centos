@@ -8,11 +8,11 @@ class Chef
 
         action :install do
           dmg_package 'GitOSX-Installer' do
-            app new_resource.osx_dmg_app_name
-            package_id new_resource.osx_dmg_package_id
-            volumes_dir new_resource.osx_dmg_volumes_dir
-            source new_resource.osx_dmg_url
-            checksum new_resource.osx_dmg_checksum
+            app node['git']['osx_dmg']['app_name']
+            package_id node['git']['osx_dmg']['package_id']
+            volumes_dir node['git']['osx_dmg']['volumes_dir']
+            source node['git']['osx_dmg']['url']
+            checksum node['git']['osx_dmg']['checksum']
             type 'pkg'
             action :install
           end

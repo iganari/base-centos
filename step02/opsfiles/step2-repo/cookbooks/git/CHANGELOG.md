@@ -2,31 +2,6 @@ git Cookbook CHANGELOG
 ======================
 This file is used to list changes made in each version of the git cookbook.
 
-v4.3.4 (2015-09-06)
--------------------
-- Fixing package_id on OSX
-- Adding 2.5.1 data for Windows
-
-v4.3.3 (2015-07-27)
--------------------
-- #76: Use checksum keyname instead of value in source recipe
-
-v4.3.2 (2015-07-27)
--------------------
-- Fixing up Windows provider (issue #73)
-- Supporting changes to source_prefix in source provider (#62)
-
-v4.3.1 (2015-07-23)
--------------------
-- Fixing up osx_dmg_source_url
-
-v4.3.0 (2015-07-20)
--------------------
-- Removing references to node attributes from provider code
-- Name-spacing of client resource property names
-- Addition of windows recipe
-- Creation of package recipe
-
 v4.2.4 (2015-07-19)
 -------------------
 - Fixing source provider selection bug from 4.2.3
