@@ -29,7 +29,7 @@ Vagrant.configure(2) do |config|
   ### install of chef recipe
     config.omnibus.chef_version=:latest
     config.vm.provision  "chef_zero" do |chef|
-      chef.cookbooks_path = "./step2-repo/cookbooks"
+      chef.cookbooks_path = ["./step2-repo/cookbooks", "./step2-repo/site-cookbooks"]
       chef.roles_path = "step2-repo/roles"
       chef.add_role "common"
       # chef.add_role "elasticsearch"

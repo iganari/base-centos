@@ -6,7 +6,9 @@
     "tz": "Asia/Tokyo"
   },
   "run_list": [
-    "recipe[timezone-ii::rhel]"
-    ,"git"
+    "recipe[timezone-ii::rhel]",
+    "recipe[git]",
+    "recipe[iptables::disabled]",
+    "recipe[vim]"
   ]
 }
