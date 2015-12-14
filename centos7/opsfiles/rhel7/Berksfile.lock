@@ -6,6 +6,7 @@ DEPENDENCIES
     git: https://github.com/L2G/timezone-ii.git
     revision: 28c9e49c58c534e798cf01a77a9373c4c54f4587
   vim (~> 2.0.0)
+  yum (~> 3.8.2)
 
 GRAPH
   7-zip (1.0.2)
