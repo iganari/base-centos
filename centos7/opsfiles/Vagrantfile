@@ -36,4 +36,6 @@ Vagrant.configure(2) do |config|
     # chef.add_role "elasticsearch"
   end
 
+  config.vm.provision :shell, :path => "../inst-docker.sh"
+
 end
