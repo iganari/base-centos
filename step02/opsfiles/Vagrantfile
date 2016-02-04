@@ -1,20 +1,41 @@
 Vagrant.configure(2) do |config|
-  config.vm.box = "bento/centos-6.7"
+  # config.vm.box = "bento/centos-6.7"
   config.vbguest.auto_update = false
+
+  config.vm.define :svr01 do |server|
+    ### determined specific IP.
+    server.vm.network "private_network", ip: "192.168.33.11"
+    ### vbox name
+    server.vm.hostname = 'svr01'
+    ### box setting
+    server.vm.box = "bento/centos-6.7"
+  end
+
+  config.vm.define :svr02 do |server|
+    ### determined specific IP.
+    server.vm.network "private_network", ip: "192.168.33.12"
+    ### vbox name
+    server.vm.hostname = 'svr02'
+    ### box setting
+    server.vm.box = "bento/centos-6.7"
+  end
+
+  config.vm.define :svr03 do |server|
+    ### determined specific IP.
+    server.vm.network "private_network", ip: "192.168.33.13"
+    ### vbox name
+    server.vm.hostname = 'svr03'
+    ### box setting
+    server.vm.box = "bento/centos-6.7"
+  end
 
   config.vm.provider "virtualbox" do |vb|
     ### vagrant hostname 
-    vb.name = "base-centos-step2"
-    vb.customize ['modifyvm', :id,
-                  "--memory", 1024]
+    # vb.name = "base-centos-step2"
+    vb.customize ['modifyvm', :id,"--memory", 512]
+    vb.customize ['modifyvm', :id,"--natdnshostresolver1", "on"]
+    vb.customize ['modifyvm', :id,"--natdnsproxy1", "on"]
   end  
-
-  config.vm.define :web1 do |web|
-    ### determined specific IP.
-    web.vm.network "private_network", ip: "192.168.33.12"
-    ### vbox name
-    web.vm.hostname = 'vagrant-svr'
-  end
  
   ### settitng of synced_folder
   config.vm.synced_folder "../../", "/develop/base-centos", \
@@ -22,8 +43,6 @@ Vagrant.configure(2) do |config|
     :owner  => 'root', \
     :group  => 'root', \
     :mount_options => ['dmode=755,fmode=755'] 
-  # end
-
 
 
   ### install of chef recipe
