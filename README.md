@@ -12,6 +12,11 @@ centosのbasicなテスト環境構築用
     + vagrant
 
 
++ Vagrant boxの探し方
+
+https://atlas.hashicorp.com/boxes/search
+
+
 
 + 参考URL
 [[WIP] chef!](http://qiita.com/drafts/462ba83face0a3ab8352)
