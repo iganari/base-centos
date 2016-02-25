@@ -9,6 +9,8 @@
     "recipe[timezone-ii::rhel]",
     "recipe[git]",
     "recipe[iptables::disabled]",
-    "recipe[vim]"
+    "recipe[vim]",
+    "recipe[yum]",
+    "recipe[yum-epel]"
   ]
 }
