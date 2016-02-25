@@ -1,0 +1,16 @@
+{
+  "name": "common",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "tz": "Asia/Tokyo"
+  },
+  "run_list": [
+    "recipe[timezone-ii::rhel]",
+    "recipe[git]",
+    "recipe[iptables::disabled]",
+    "recipe[vim]",
+    "recipe[yum]",
+    "recipe[yum-epel]"
+  ]
+}
