@@ -37,6 +37,6 @@ Vagrant.configure(2) do |config|
     :group  => 'root', \
     :mount_options => ['dmode=755,fmode=755'] 
 
-  # config.vm.provision :shell, :path => "../inst-docker.sh"
+  config.vm.provision :shell, :path => "../../ssh/init.sh"
 
 end
